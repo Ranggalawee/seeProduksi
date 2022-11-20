@@ -4,7 +4,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { FiPlus, FiChevronDown } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 
-const inputBahan = () => {
+const inputProduk = () => {
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ')
     }
@@ -18,19 +18,19 @@ const inputBahan = () => {
                             <span className="pr-2">
                                 <FiPlus />
                             </span>
-                            Tambah Bahan Baku
+                            Tambah Produk
                         </div>
                     </div>
 
                     <form className="w-full">
-                        <div className="flex flex-col gap-y-5">
+                        <div className="flex flex-col gap-y-3">
                             <div className="flex h-16 pl-4 rounded-lg bg-rose-900 items-center text-white font-bold">
-                                Tambah Bahan Baku
+                                Tambah Produk
                             </div>
 
                             <div className="flex flex-row items-center">
                                 <label className="text-black w-32">
-                                    Jenis Bahan
+                                    Jenis Produk
                                 </label>
                                 <Menu as="div" className="relative inline-block text-left">
                                     <div>
@@ -110,7 +110,7 @@ const inputBahan = () => {
                                     Kode
                                 </label>
                                 <input className="w-full h-12 ml-4 border border-rose-900 bg-transparent rounded-lg p-2"
-                                    placeholder="enter kode bahan">
+                                    placeholder="enter kode produk">
                                 </input>
                             </div>
 
@@ -119,40 +119,21 @@ const inputBahan = () => {
                                     Nama
                                 </label>
                                 <input className="w-full h-12 ml-4 border border-rose-900 bg-transparent rounded-lg p-2"
-                                    placeholder="enter nama bahan">
+                                    placeholder="enter nama produk">
                                 </input>
                             </div>
-
-                            <div className="flex flex-row items-center">
-                                <label className="text-black w-32">
-                                    Satuan
-                                </label>
-                                <input className="w-full h-12 ml-4 border border-rose-900 bg-transparent rounded-lg p-2"
-                                    placeholder="enter satuan bahan">
-                                </input>
-                            </div>
-
-                            <div className="flex flex-row items-center">
-                                <label className="text-black w-32">
-                                    Stock
-                                </label>
-                                <input className="w-full h-12 ml-4 border border-rose-900 bg-transparent rounded-lg p-2"
-                                    placeholder="enter stock bahan">
-                                </input>
-                            </div>
-                            
-                            <div className="pt-5 flex flex-row gap-3 justify-end">
-                                <button className="bg-transparent border border-rose-900 p-2 text-rose-900 rounded-lg">
-                                    <Link to="/bahanbaku">Cancel</Link>
-                                </button>
-                                <button type="submit" className="bg-rose-900 rounded-lg p-2 text-white">Tambah</button>
-                            </div>
+                        </div>
+                        <div className="flex flex-row gap-3 justify-end pt-5">
+                            <button className="bg-transparent border border-rose-900 p-2 text-rose-900 rounded-lg">
+                                <Link to="/bahanbaku">Cancel</Link>
+                            </button>
+                            <button type="submit" className="bg-rose-900 rounded-lg p-2 text-white">Tambah</button>
                         </div>
                     </form>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
 
-export default inputBahan
+export default inputProduk

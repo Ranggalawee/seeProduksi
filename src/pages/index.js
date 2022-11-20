@@ -7,6 +7,7 @@ import BahanBaku from "./bahanbaku";
 import Laporan from "./laporan";
 import Setting from "./setting";
 import InputBahan from "./inputBahan";
+import InputProduk from "./inputProduk";
 
 export {
     Homepage,
@@ -17,5 +18,6 @@ export {
     BahanBaku,
     Laporan,
     Setting,
-    InputBahan
+    InputBahan,
+    InputProduk
 }

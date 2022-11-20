@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Homepage, LayoutA, Login, Register, Produk, BahanBaku, Laporan, Setting, InputBahan } from './pages'
+import { Homepage, LayoutA, Login, Register, Produk, BahanBaku, Laporan, Setting, InputBahan, InputProduk } from './pages'
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
             <Route path="/laporan" element={<Laporan />} />
             <Route path="/setting" element={<Setting />} />
             <Route path="/inputBahan" element={<InputBahan />} />
+            <Route path="/inputProduk" element={<InputProduk />} />
           </Route>
         </Routes>
       </BrowserRouter>

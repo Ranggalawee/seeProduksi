@@ -16,7 +16,7 @@ const BahanBaku = () => {
                         </div>
 
                         <div className="w-64 overflow-y-auto py-4 px-3 bg-rose-900 rounded-lg">
-                            <ul className="space-y-2">
+                            <ul className="space-y-5">
                                 <li>
                                     <Link to="/bahanbaku/a" className="flex items-center p-2 rounded-lg text-white hover:bg-rose-800">
                                         <span className="ml-3">Kulit</span>
