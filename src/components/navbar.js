@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { FiMenu, FiSettings } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
+import { logo } from '../assets'
 
 const Nav = () => {
     let Links = [
@@ -7,20 +9,22 @@ const Nav = () => {
         { name: "Produk", link: "/produk" },
         { name: "Bahan Baku", link: "/bahanbaku" },
         { name: "Laporan", link: "/laporan" },
-        { name: <FiSettings/>, link: "/setting" },
+        { name: <FiSettings />, link: "/setting" },
     ];
     let [open, setOpen] = useState(false);
 
     return (
         <div className='w-full top-0 left-0'>
-            <div className='md:flex items-center justify-between bg-rose-900 py-4 md:px-10 px-7'>
+            <div className='md:flex items-center justify-between bg-rose-900 py-4 md:px-16 px-8'>
                 <div className='font-bold text-2xl cursor-pointer flex items-center text-white'>
-                    SeeProduksi
+                    <Link to="/">
+                        <img src={logo} alt="logo" width="150" height="150"></img>
+                    </Link>
                 </div>
 
                 <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
                     <span className="text-white">
-                        {open ? <FiMenu/> : <FiMenu />}
+                        {open ? <FiMenu /> : <FiMenu />}
                     </span>
                 </div>
 
@@ -28,7 +32,7 @@ const Nav = () => {
                     {
                         Links.map((link) => (
                             <li key={link.name} className='md:ml-8 md:my-0 my-7'>
-                                <a href={link.link} className='text-white hover:font-bold duration-100'>{link.name}</a>
+                                <Link to={link.link} className='text-white hover:font-bold duration-100'>{link.name}</Link>
                             </li>
                         ))
                     }

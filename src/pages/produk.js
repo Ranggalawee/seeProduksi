@@ -13,34 +13,41 @@ const Produk = () => {
                             <span className="pr-2">
                                 <FiBox />
                             </span>
-                            Bahan Baku
+                            Produk
                         </div>
 
-                        <div className="w-64 overflow-y-auto py-4 px-3 bg-rose-900 rounded-lg">
-                            <ul className="space-y-5">
+                        <div className="w-64 overflow-y-auto p-3 bg-rose-900 rounded-lg">
+                            <ul className="space-y-2">
+                            <ul className="space-y-2">
                                 <li>
-                                    <Link to="/bahanbaku/a" className="flex items-center p-2 rounded-lg text-white hover:bg-rose-800">
+                                    <Link to="/bahanbaku/a" className="h-12 flex items-center p-2 rounded-lg text-white hover:bg-rose-800">
                                         <span className="ml-3">Tas Wanita</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/bahanbaku/a" className="flex items-center p-2 rounded-lg text-white hover:bg-rose-800">
+                                    <Link to="/bahanbaku/a" className="h-12 flex items-center p-2 rounded-lg text-white hover:bg-rose-800">
                                         <span className="ml-3">Tas Pria</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/bahanbaku/a" className="flex items-center p-2 rounded-lg text-white hover:bg-rose-800">
+                                    <Link to="/bahanbaku/a" className="h-12 flex items-center p-2 rounded-lg text-white hover:bg-rose-800">
                                         <span className="ml-3">Pouch</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/bahanbaku/a" className="flex items-center p-2 rounded-lg text-white hover:bg-rose-800">
+                                    <Link to="/bahanbaku/a" className="h-12 flex items-center p-2 rounded-lg text-white hover:bg-rose-800">
                                         <span className="ml-3">Dompet</span>
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link to="/bahanbaku/a" className="h-12 flex items-center p-2 rounded-lg text-white hover:bg-rose-800">
+                                        <span className="ml-3">Key Holder</span>
+                                    </Link>
+                                </li>
+                            </ul>
                             </ul>
                         </div>
-                        <button class="mt-5 w-64 flex items-center justify-center p-2 text-base font-normal bg-rose-900 text-white rounded-lg border hover:bg-transparent hover:border-rose-900 hover:text-rose-900">
+                        <button class="mt-5 w-64 h-12 flex items-center justify-center p-2 text-base font-normal bg-rose-900 text-white rounded-lg border hover:bg-transparent hover:border-rose-900 hover:text-rose-900">
                             <Link to="/inputProduk">Tambah produk</Link>
                         </button>
                     </div>

@@ -34,7 +34,7 @@ const inputProduk = () => {
                                 </label>
                                 <Menu as="div" className="relative inline-block text-left">
                                     <div>
-                                        <Menu.Button className="inline-flex w-full justify-center rounded-lg border border-rose-900 bg-white px-4 py-2 text-black focus:outline-none">
+                                        <Menu.Button className="inline-flex w-full justify-center items-center rounded-lg border bg-rose-900 px-4 py-2 text-white focus:outline-none hover:bg-rose-800">
                                             Pilih jenis produk
                                             <FiChevronDown className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
                                         </Menu.Button>
@@ -125,7 +125,7 @@ const inputProduk = () => {
                         </div>
                         <div className="flex flex-row gap-3 justify-end pt-5">
                             <button className="bg-transparent border border-rose-900 p-2 text-rose-900 rounded-lg">
-                                <Link to="/bahanbaku">Cancel</Link>
+                                <Link to="/produk">Cancel</Link>
                             </button>
                             <button type="submit" className="bg-rose-900 rounded-lg p-2 text-white">Tambah</button>
                         </div>

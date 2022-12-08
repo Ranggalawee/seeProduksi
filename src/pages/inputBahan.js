@@ -34,8 +34,8 @@ const inputBahan = () => {
                                 </label>
                                 <Menu as="div" className="relative inline-block text-left">
                                     <div>
-                                        <Menu.Button className="inline-flex w-full justify-center rounded-lg border border-rose-900 bg-white px-4 py-2 text-black focus:outline-none">
-                                            Pilih jenis produk
+                                    <Menu.Button className="inline-flex w-full justify-center items-center rounded-lg border bg-rose-900 px-4 py-2 text-white focus:outline-none hover:bg-rose-800">
+                                            Pilih jenis
                                             <FiChevronDown className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
                                         </Menu.Button>
                                     </div>

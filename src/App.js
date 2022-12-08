@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Homepage, LayoutA, Login, Register, Produk, BahanBaku, Laporan, Setting, InputBahan, InputProduk } from './pages'
+import { Homepage, LayoutA, Login, Register, Produk, BahanBaku, Laporan, Setting, InputBahan, InputProduk, Hpp, Karyawan, DaftarKaryawan, DetailProduksi, Faktur } from './pages'
 
 function App() {
   return (
@@ -16,6 +16,11 @@ function App() {
             <Route path="/setting" element={<Setting />} />
             <Route path="/inputBahan" element={<InputBahan />} />
             <Route path="/inputProduk" element={<InputProduk />} />
+            <Route path="/hpp" element={<Hpp />} />
+            <Route path="/setting/karyawan" element={<Karyawan />} />
+            <Route path="/setting/daftarkaryawan" element={<DaftarKaryawan />} />
+            <Route path="/produk/detailproduksi" element={<DetailProduksi />} />
+            <Route path="/produk/detailproduksi/faktur" element={<Faktur />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -8,6 +8,12 @@ import Laporan from "./laporan";
 import Setting from "./setting";
 import InputBahan from "./inputBahan";
 import InputProduk from "./inputProduk";
+import Hpp from "./hpp";
+import Karyawan from "./karyawan";
+import DaftarKaryawan from "./daftarkaryawan";
+import DetailProduksi from "./detailproduksi";
+import Faktur from "./faktur";
+
 
 export {
     Homepage,
@@ -19,5 +25,10 @@ export {
     Laporan,
     Setting,
     InputBahan,
-    InputProduk
+    InputProduk,
+    Hpp,
+    Karyawan,
+    DaftarKaryawan,
+    DetailProduksi,
+    Faktur
 }
