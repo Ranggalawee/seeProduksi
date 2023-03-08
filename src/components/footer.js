@@ -11,7 +11,7 @@ const footer = () => {
             <div className="flex flex-row p-7 bg-rose-900 sm:p-16 text-white gap-16">
                 <div className="flex flex-col gap-4 text-xl">
                     <img src={logo} alt="logo" width="200" height="200" />
-                    <p>seeProduksi</p>
+                    <p>Kelola produksimu dengan kami!</p>
                 </div>
                 <div className="flex flex-row gap-16">
                     <div className="text-white">
@@ -34,13 +34,13 @@ const footer = () => {
                         <p className="mb-6 font-bold text-xl">Our services</p>
                         <ul>
                             <li className="mb-4 hover:font-bold">
-                                <p>Products</p>
+                                <p><Link to="/produk">Produk</Link></p>
                             </li>
                             <li className="mb-4 hover:font-bold">
-                                <p>Materials</p>
+                                <p><Link to="/bahanbaku">Bahan Baku</Link></p>
                             </li>
                             <li className="mb-4 hover:font-bold">
-                                <p>Production Reports</p>
+                                <p><Link to="/laporan">Laporan Produksi</Link></p>
                             </li>
                         </ul>
                     </div>
@@ -54,7 +54,7 @@ const footer = () => {
                 </div>
 
             </div>
-            
+
         </>
     )
 }

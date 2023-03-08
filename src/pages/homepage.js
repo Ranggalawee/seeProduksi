@@ -52,7 +52,7 @@ const Homepage = () => {
       <div className="flex flex-row p-8 sm:p-16 bg-rose-200 items-center justify-between">
         <p className="text-rose-900 font-bold text-3xl">Manage your company now with us!</p>
         <button className="w-36 h-12 bg-rose-900 hover:bg-transparent text-white hover:text-rose-900 p-2 border hover:border-rose-900 rounded-lg">
-            <Link to="/produk">Register</Link>
+            <Link to="/">Register</Link>
           </button>
       </div>
     </>
