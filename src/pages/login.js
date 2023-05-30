@@ -2,12 +2,16 @@ import * as React from "react";
 import * as Yup from 'yup';
 import { useState } from 'react';
 import { FiEyeOff, FiEye } from "react-icons/fi";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
+import axios from "axios";
+import api from "../config/api";
 
 const Login = () => {
     const [error, setError] = useState(null)
     const [pw, setPassword] = useState({ password: "", showPw: false });
+
+    const navigate = useNavigate();
 
     const handleClickShowPassword = () => {
         setPassword({ ...pw, showPw: !pw.showPw });
@@ -17,10 +21,19 @@ const Login = () => {
     }
 
     const doLogin = (event) => {
+        axios.post(api.urlLogin, event)
+            .then((res) => {
+                console.log(res.data.data.accessToken)
+                localStorage.setItem('token', res.data.data.accessToken)
+                navigate('/', { replace: true })
+                formik.resetForm()
+            })
+            .catch(() => {
+                setError("Email or password doesn't match")
+            })
+
         formik.setSubmitting(false)
-        formik.resetForm()
         console.log(event)
-        setError("Email or password doesn't match")
     }
 
     const formik = useFormik({

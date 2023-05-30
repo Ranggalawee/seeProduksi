@@ -3,8 +3,39 @@ import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { FiPlus, FiChevronDown } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
+import * as Yup from 'yup'
+import { useFormik } from 'formik'
 
-const inputProduk = () => {
+const InputProduk = () => {
+    const doProduksi = (event) => {
+        formik.setSubmitting(false)
+        console.log(event)
+    }
+    const formik = useFormik({
+        initialValues: {
+            code: '',
+            name: '',
+            category: '',
+            price: '',
+            material: ''
+        },
+
+        validationSchema: Yup.object({
+            code: Yup.string()
+                .required('Code is required'),
+            name: Yup.string()
+                .required('Name is required'),
+            category: Yup.string()
+                .required('Category is required'),
+            price: Yup.string()
+                .required('Price is required'),
+            material: Yup.string()
+                .required('Material is required'),
+        }),
+
+        onSubmit: doProduksi
+    })
+
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ')
     }
@@ -109,7 +140,9 @@ const inputProduk = () => {
                                 <label className="text-black w-32">
                                     Kode
                                 </label>
-                                <input className="w-full h-12 ml-4 border border-rose-900 bg-transparent rounded-lg p-2"
+                                <input
+                                    {...formik.getFieldProps('code')}
+                                    className="w-full h-12 ml-4 border border-rose-900 bg-transparent rounded-lg p-2"
                                     placeholder="enter kode produk">
                                 </input>
                             </div>
@@ -118,8 +151,30 @@ const inputProduk = () => {
                                 <label className="text-black w-32">
                                     Nama
                                 </label>
-                                <input className="w-full h-12 ml-4 border border-rose-900 bg-transparent rounded-lg p-2"
+                                <input
+                                    {...formik.getFieldProps('name')}
+                                    className="w-full h-12 ml-4 border border-rose-900 bg-transparent rounded-lg p-2"
                                     placeholder="enter nama produk">
+                                </input>
+                            </div>
+                            <div className="flex flex-row items-center">
+                                <label className="text-black w-32">
+                                    Harga
+                                </label>
+                                <input 
+                                    {...formik.getFieldProps('price')}
+                                    className="w-full h-12 ml-4 border border-rose-900 bg-transparent rounded-lg p-2"
+                                    placeholder="enter harga produk">
+                                </input>
+                            </div>
+                            <div className="flex flex-row items-center">
+                                <label className="text-black w-32">
+                                    Material
+                                </label>
+                                <input 
+                                    {...formik.getFieldProps('material')}
+                                    className="w-full h-12 ml-4 border border-rose-900 bg-transparent rounded-lg p-2"
+                                    placeholder="enter material produk">
                                 </input>
                             </div>
                         </div>
@@ -136,4 +191,4 @@ const inputProduk = () => {
     )
 }
 
-export default inputProduk
+export default InputProduk

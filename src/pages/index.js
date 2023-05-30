@@ -7,7 +7,7 @@ import BahanBaku from "./bahanbaku";
 import Laporan from "./laporan";
 import Setting from "./setting";
 import InputBahan from "./inputBahan";
-import InputProduk from "./inputProduk";
+import InputProduk from "./InputProduk";
 import Hpp from "./hpp";
 import Karyawan from "./karyawan";
 import DaftarKaryawan from "./daftarkaryawan";

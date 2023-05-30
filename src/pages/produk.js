@@ -1,7 +1,6 @@
-import React from 'react'
 import { FiBox } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
-import TasWanita from '../components/produk_a'
+import ListProduct from '../components/list_product'
 
 const Produk = () => {
     return (
@@ -51,7 +50,7 @@ const Produk = () => {
                             <Link to="/inputProduk">Tambah produk</Link>
                         </button>
                     </div>
-                    <TasWanita />
+                    <ListProduct/>
                 </div>
             </div>
         </>
